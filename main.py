@@ -11,8 +11,8 @@ root = tk.Tk()
 root.title("Food Recommendation Expert System")
 
 # Center the main window
-window_width = 900
-window_height = 700
+window_width = 650
+window_height = 650
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width - window_width) // 2
@@ -143,8 +143,8 @@ def Foodrecommandation():
         result_window.title("Your Food Recommendation")
         
         # Center the result window
-        result_width = 700
-        result_height = 710
+        result_width = 600
+        result_height = 600
         result_x = (screen_width - result_width) // 2
         result_y = (screen_height - result_height) // 2
         result_window.geometry(f"{result_width}x{result_height}+{result_x}+{result_y}")
@@ -236,11 +236,17 @@ button_frame = tk.Frame(root, bg="#f5f6f5")
 button_frame.pack(pady=20)
 
 # Get Recommendation button
-recommend_button = ttk.Button(button_frame, text="Get Recommendation", command=Foodrecommandation)
-recommend_button.pack(side="left", padx=10)
+# Parameters you can change
+BUTTON_X = 400
+BUTTON_Y = 300
+BUTTON_SPACING = 50
 
-# Reset button
-reset_button = ttk.Button(button_frame, text="Reset Form", command=reset_form)
-reset_button.pack(side="left", padx=10)
+# Place buttons manually
+recommend_button = ttk.Button(root, text="Get Recommendation", command=Foodrecommandation)
+recommend_button.place(x=BUTTON_X, y=BUTTON_Y)
+
+reset_button = ttk.Button(root, text="Reset Form", command=reset_form)
+reset_button.place(x=BUTTON_X + 20, y=BUTTON_Y + BUTTON_SPACING)
+
 
 root.mainloop()
