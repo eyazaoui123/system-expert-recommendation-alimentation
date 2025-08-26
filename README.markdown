@@ -25,7 +25,6 @@ A Python-based expert system using **Tkinter** and **Experta** to recommend rest
 Below are screenshots of the Food Recommendation Expert System:
 
 - **Main Input Window**: Select your preferences for diet, health, meal type, and more.
-  ![Main Input Window](screenshots/main_window.png)
 
 - **Result Window**: View the recommended dish, description, and image (e.g., Yaourt aux Fruits).
   ![Result Window](screenshots/result_window.png)
